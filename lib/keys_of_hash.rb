@@ -1,13 +1,15 @@
 class Hash
   
   def keys_of(arguments)
-    animals = []
-		self.each  do |animal, place|
-			if arguments.include?(place)
-				animals << animal
-			end
-		end
-		return animals
+    array = []
+    arguments.each do |x|
+      self.each do |k, v|
+        if v == x
+          array << k
+        end
+      end 
+    end
+    array
 	end
   
 end
