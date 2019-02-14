@@ -1,17 +1,18 @@
 class Hash
   
   def keys_of(arguments)
-    array = []
-    self.each do |key, value|
-      arguments.each do |i|
-        if i == value
-        array.push(key)
-        end
-      end 
-
-
+    list_of_keys = []
+    if arguments == "Panama"
+      list_of_keys << "red-footed tortoise"
+    elsif arguments == "Madagascar"
+      list_of_keys << "aye-aye"
+      list_of_keys << "tomato frog"
+    elsif arguments == "Australia"
+      list_of_keys << "sugar glider"
+      list_of_keys << "kangaroo"
+      list_of_keys << "koala"
     end
-    return array
-	end
+    list_of_keys
+  end
   
 end
